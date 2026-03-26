@@ -45,6 +45,29 @@ wheels = [
 ]
 
 [[package]]
+name = "arduino-8days"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "google-genai" },
+    { name = "pandas" },
+    { name = "pyserial" },
+    { name = "python-dotenv" },
+    { name = "streamlit" },
+    { name = "watchdog" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "google-genai", specifier = ">=1.68.0" },
+    { name = "pandas", specifier = ">=2.3.3" },
+    { name = "pyserial", specifier = ">=3.5" },
+    { name = "python-dotenv", specifier = ">=1.2.2" },
+    { name = "streamlit", specifier = ">=1.55.0" },
+    { name = "watchdog", specifier = ">=6.0.0" },
+]
+
+[[package]]
 name = "attrs"
 version = "26.1.0"
 source = { registry = "https://pypi.org/simple" }
@@ -814,29 +837,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/92/8e/f2b8b4fa8ba65aae251170c54f8ce198fb588fc348301c2b624f8c63efac/streamlit-1.55.0.tar.gz", hash = "sha256:015e512bbd02d000f4047e51118dc086b70e7d9c46b4a11a33c2509731379626", size = 8612008 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/dc/e6/412c1e1f200ca8c32ecf10201839183e261ad61ced3ede34a66f6d4be3cf/streamlit-1.55.0-py3-none-any.whl", hash = "sha256:1e4a16449c6131696180f4ddb40ea8c51834e89c2a43e1b0362bc9b1cfd9b415", size = 9075714 },
-]
-
-[[package]]
-name = "streamlit-arduino"
-version = "0.1.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "google-genai" },
-    { name = "pandas" },
-    { name = "pyserial" },
-    { name = "python-dotenv" },
-    { name = "streamlit" },
-    { name = "watchdog" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "google-genai", specifier = ">=1.68.0" },
-    { name = "pandas", specifier = ">=2.3.3" },
-    { name = "pyserial", specifier = ">=3.5" },
-    { name = "python-dotenv", specifier = ">=1.2.2" },
-    { name = "streamlit", specifier = ">=1.55.0" },
-    { name = "watchdog", specifier = ">=6.0.0" },
 ]
 
 [[package]]

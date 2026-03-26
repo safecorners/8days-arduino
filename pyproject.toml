@@ -1,7 +1,7 @@
 [project]
-name = "streamlit-arduino"
+name = "arduino-8days"
 version = "0.1.0"
-description = "Demostration of Streamlit with Arduino"
+description = "An 8-day journey with Arduino and Streamlit, exploring real-time data flow and AI-driven control."
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
