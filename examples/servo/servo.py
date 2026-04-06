@@ -30,8 +30,8 @@ payload = {
 }
 
 if ser and ser.is_open:
-    msg = json.dumps(payload)
-    ser.write(msg.encode())
+    message = json.dumps(payload)
+    ser.write(message.encode())
 
     st.subheader("JSON")
-    st.code(payload, language="json")
+    st.code(message, language="json")

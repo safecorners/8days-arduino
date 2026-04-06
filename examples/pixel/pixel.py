@@ -33,15 +33,14 @@ def hex_to_rgb(hex_code):
 if color := st.color_picker("색상"):
     r,g,b = hex_to_rgb(color)
 
-    message = {
+    payload = {
         "type": "pixel",
         "r": r,
         "g": g,
         "b": b
     }
 
-    st.json(message)
-
-    if ser and ser.is_open and ser.in_waiting:
-        payload = json.dumps(message)
-        ser.write(payload.encode())
+    if ser and ser.is_open:
+        message = json.dumps(payload)
+        st.json(message)
+        ser.write(message.encode())

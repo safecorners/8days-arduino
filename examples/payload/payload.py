@@ -24,15 +24,15 @@ else:
     st.error(f"포트[{port}]을 찾을 수 없습니다.", icon=":material/usb_off:")
 
 
-msg = ""
+message = ""
 if st.button("On",
              icon=":material/lightbulb:",
              use_container_width=True,
              disabled=(ser is None),
              ):
     payload = {"led": "on"}
-    msg = json.dumps(payload) + "\n"
-    ser.write(msg.encode())
+    message = json.dumps(payload) + "\n"
+    ser.write(message.encode())
     
 if st.button("Off",
              icon=":material/power_off:",
@@ -40,10 +40,10 @@ if st.button("Off",
              disabled=(ser is None),
              ):
     payload = {"led": "off"}
-    msg = json.dumps(payload) + "\n"
-    ser.write(msg.encode())
+    message = json.dumps(payload) + "\n"
+    ser.write(message.encode())
 
 
 if ser and ser.is_open:
     st.subheader("JSON")
-    st.code(msg, language="json")
+    st.code(message, language="json")
