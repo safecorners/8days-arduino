@@ -33,11 +33,11 @@ else:
 
 if ser and ser.is_open and ser.in_waiting > 0:
     try:
-        line = ser.readline().decode('utf-8').strip()
-        data = json.loads(line)
+        message = ser.readline().decode('utf-8').strip()
+        payload = json.loads(message)
         
-        sensor_type = data["type"]
-        sensor_value = data["value"]
+        sensor_type = payload["type"]
+        sensor_value = payload["value"]
 
         new_data = pd.DataFrame({
             "time": [datetime.datetime.now()],
