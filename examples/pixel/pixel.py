@@ -42,5 +42,7 @@ if color := st.color_picker("색상"):
 
     if ser and ser.is_open:
         message = json.dumps(payload)
-        st.json(message)
         ser.write(message.encode())
+
+    with st.expander("JSON"):
+        st.code(json.dumps(payload, indent=2), language="json")
