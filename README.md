@@ -90,3 +90,14 @@ watchdog==6.0.0
 ```Bash
 streamlit run app.py
 ```
+
+## 아두이노
+
+### 사용 라이브러리
+
+- [ArduinoJson 7](https://arduinojson.org/)
+
+### 사용 부품
+
+- 조도 센서: A0
+- 서보모터: D9
